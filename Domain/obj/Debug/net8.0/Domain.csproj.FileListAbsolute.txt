@@ -5,6 +5,7 @@ D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.GeneratedMSBu
 D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.sourcelink.json
 D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.dll
 D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\Code project\ASP.NET\EFMigration\Domain\obj\Debug\net8.0\Domain.pdb

@@ -9,6 +9,7 @@ D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructu
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll

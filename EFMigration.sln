@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFMigration", "EFMigration\EFMigration.csproj", "{6FFFE014-9C93-4328-BD97-0658DDB3F4ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "EFMigration\API.csproj", "{6FFFE014-9C93-4328-BD97-0658DDB3F4ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2A0BCFAF-4CB9-4C3A-BAEA-DE335903B8E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{2A0BCFAF-4CB9-4C3A-BAEA-DE335903B8E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{6C3284E2-9D5E-454F-B4CE-352440F71273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{6C3284E2-9D5E-454F-B4CE-352440F71273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F1220345-5E89-411F-BA71-C696FA53C725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F1220345-5E89-411F-BA71-C696FA53C725}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
