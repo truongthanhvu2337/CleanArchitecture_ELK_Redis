@@ -2,6 +2,7 @@
 using Domain.Repository.Generic;
 using Domain.Repository.UnitOfWork;
 using Infrastructure.Extensions;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -84,6 +85,7 @@ namespace Infrastructure.Repositories.Common
         {
             return await _context.Set<TDomain>().Where(predicate).ToListAsync();
         }
+
 
         public async Task<PagedList<TDomain>> GetAll(int page, int eachPage, string sortBy, bool isAscending = false)
         {

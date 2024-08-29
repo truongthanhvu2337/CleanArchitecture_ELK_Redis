@@ -176,3 +176,6 @@ D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Serilog.Sinks.File.dll
 D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Namotion.Reflection.dll
+D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\NJsonSchema.dll
+D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\NJsonSchema.Annotations.dll

@@ -1,4 +1,6 @@
-﻿namespace Infrastructure.Repositories
+﻿using Infrastructure.Persistence;
+
+namespace Infrastructure.Repositories
 {
     public class ProductRepository
     {

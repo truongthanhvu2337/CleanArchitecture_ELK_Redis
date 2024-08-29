@@ -76,6 +76,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "NJsonSchema": {
+              "target": "Package",
+              "version": "[11.0.2, )"
             }
           },
           "imports": [

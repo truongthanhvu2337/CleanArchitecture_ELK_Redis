@@ -1,4 +1,6 @@
 ﻿using Domain.Models.Response;
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 
 namespace API.Middleware
@@ -40,7 +42,21 @@ namespace API.Middleware
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = statusCode;
 
+            if (ex is FluentValidation.ValidationException validationException)
+            {
+                validationException.Errors.Select(error => new
+                {
+                    PropertyName = error.PropertyName,
+                    ErrorMessage = error.ErrorMessage
+                }).ToList();
+
+
+            }
+
             return context.Response.WriteAsync(errorResponse.ToString());
+
+
+
         }
     }
 

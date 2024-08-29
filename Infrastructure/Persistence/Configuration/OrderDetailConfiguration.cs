@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infrastructure.Configuration
+namespace Infrastructure.Persistence.Configuration
 {
     public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
     {

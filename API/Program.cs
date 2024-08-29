@@ -3,6 +3,7 @@ using API.Middleware;
 using Application;
 using HealthChecks.UI.Client;
 using Infrastructure;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 

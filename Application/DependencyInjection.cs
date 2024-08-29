@@ -14,6 +14,7 @@ namespace Application
             {
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
                 cfg.AddOpenBehavior(typeof(UnitOfWorkBehaviour<,>));
+                cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
             });
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

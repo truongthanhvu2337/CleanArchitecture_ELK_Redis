@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace Application.Behaviour
 {
-    public class UnitOfWorkBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public sealed class UnitOfWorkBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : notnull, ICommand
     {
         private readonly IUnitOfWork _dataSource;

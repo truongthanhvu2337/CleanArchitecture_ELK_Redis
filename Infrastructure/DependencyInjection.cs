@@ -1,6 +1,7 @@
 ﻿using Domain.Repository;
 using Domain.Repository.UnitOfWork;
 using Infrastructure.Caching;
+using Infrastructure.Persistence;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;

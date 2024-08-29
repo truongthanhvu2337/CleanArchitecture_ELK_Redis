@@ -91,5 +91,6 @@ namespace Domain.Repository.Generic
         /// <param name="isAscending"></param>
         /// <returns></returns>
         Task<PagedList<T>> GetAll(int page, int eachPage, string sortBy, bool isAscending = false);
+
     }
 }

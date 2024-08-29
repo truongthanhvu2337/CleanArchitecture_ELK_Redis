@@ -10,6 +10,7 @@ namespace Domain.Repository
         void AddCustomer(Customer customer);
         void UpdateCustomer(Customer customer);
         void DeleteCustomer(int id);
+        Task<Customer> GetByEmail(string Name);
 
     }
 }

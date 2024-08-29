@@ -2,6 +2,7 @@
 using Domain.Repository;
 using Infrastructure.Caching;
 using Infrastructure.Extensions;
+using Infrastructure.Persistence;
 using Infrastructure.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -44,6 +45,7 @@ namespace Infrastructure.Repositories
         // Add a new customer
         public void AddCustomer(Customer customer)
         {
+            _caching.RemoveAsync("GetAllUser");
             _context.Customers.Add(customer);
         }
 
@@ -63,10 +65,10 @@ namespace Infrastructure.Repositories
             }
         }
 
-        // Save changes (optional utility method)
-        public void Save()
+        public async Task<Customer> GetByEmail(string Name)
         {
-            _context.SaveChanges();
+            return await _context.Set<Customer>().FirstOrDefaultAsync(customer => customer.Name == Name);
         }
+
     }
 }

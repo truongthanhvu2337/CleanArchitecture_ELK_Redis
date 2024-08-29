@@ -1,9 +1,11 @@
-﻿using Application.UseCase.Customers.Queries.GetAllByPagination;
+﻿using Application.UseCase.Customers.Command.CreateCustomer;
+using Application.UseCase.Customers.Queries.GetAllByPagination;
 using Application.UseCase.Customers.Queries.GetAllCustomers;
 using Domain.Models.Response;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Net.Mime;
 
 namespace API.Controllers
 {
@@ -34,6 +36,11 @@ namespace API.Controllers
             return Ok(result);
         }
 
-
+        [HttpPost("create")]
+        public async Task<ActionResult<APIResponse>> CreateCustomer([FromBody] CreateCustomerCommand command,CancellationToken cancellationToken = default)
+        {
+            var result = await _mediator.Send(command, cancellationToken);
+            return Ok(result);
+        }
     }
 }

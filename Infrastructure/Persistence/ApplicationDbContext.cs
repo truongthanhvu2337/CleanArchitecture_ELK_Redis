@@ -3,7 +3,7 @@ using Domain.Repository.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace Infrastructure
+namespace Infrastructure.Persistence
 {
     public class ApplicationDbContext : DbContext, IUnitOfWork
     {
