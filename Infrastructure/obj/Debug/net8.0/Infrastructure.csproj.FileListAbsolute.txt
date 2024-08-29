@@ -16,3 +16,5 @@ D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\refint\Infra
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 D:\Code project\ASP.NET\EFMigration\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+D:\Code project\ASP.NET\EFMigration\Infrastructure\bin\Debug\net8.0\Application.dll
+D:\Code project\ASP.NET\EFMigration\Infrastructure\bin\Debug\net8.0\Application.pdb

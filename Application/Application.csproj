@@ -21,8 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCase\Customer\Command\" />
-    <Folder Include="UseCase\Customer\Queries\" />
     <Folder Include="UseCase\Order\Command\" />
     <Folder Include="UseCase\Order\Queries\" />
   </ItemGroup>

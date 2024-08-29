@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 
-namespace Application.Repository
+namespace Domain.Repository
 {
     public interface IOrderRepo
     {

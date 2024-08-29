@@ -4,3 +4,13 @@ D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Application.Ass
 D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
 D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Application.sourcelink.json
+D:\Code project\ASP.NET\EFMigration\Application\bin\Debug\net8.0\Application.deps.json
+D:\Code project\ASP.NET\EFMigration\Application\bin\Debug\net8.0\Application.dll
+D:\Code project\ASP.NET\EFMigration\Application\bin\Debug\net8.0\Application.pdb
+D:\Code project\ASP.NET\EFMigration\Application\bin\Debug\net8.0\Domain.dll
+D:\Code project\ASP.NET\EFMigration\Application\bin\Debug\net8.0\Domain.pdb
+D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Application.dll
+D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\refint\Application.dll
+D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\Application.pdb
+D:\Code project\ASP.NET\EFMigration\Application\obj\Debug\net8.0\ref\Application.dll

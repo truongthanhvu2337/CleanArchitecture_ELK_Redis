@@ -1,7 +1,7 @@
-﻿using Domain.Models;
+﻿using Domain.Models.Response;
 using System.Net;
 
-namespace Application.Middleware
+namespace API.Middleware
 {
     public class GlobalException : IMiddleware
     {
@@ -34,7 +34,7 @@ namespace Application.Middleware
             {
                 StatusCode = statusCode,
                 Message = ex.GetType().ToString(),
-                Location = (methodError != null ? ("Class: " + methodError + ", ") : "") + "Method: " + ex.TargetSite?.Name,
+                Location = (methodError != null ? "Class: " + methodError + ", " : "") + "Method: " + ex.TargetSite?.Name,
                 Detail = ex.Message,
             };
             context.Response.ContentType = "application/json";

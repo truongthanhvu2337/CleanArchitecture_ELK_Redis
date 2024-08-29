@@ -1,22 +1,37 @@
-﻿using Application.Repository;
-using Domain.Entities;
+﻿using Domain.Entities;
+using Domain.Repository;
+using Infrastructure.Caching;
+using Infrastructure.Extensions;
+using Infrastructure.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class CustomerRepository : IUserRepo
+    public class CustomerRepository : RepositoryBase<Customer>, IUserRepo
     {
         private readonly ApplicationDbContext _context;
-
-        public CustomerRepository(ApplicationDbContext context)
+        private readonly IRedisCaching _caching;
+        public CustomerRepository(ApplicationDbContext context, IRedisCaching redisCaching) : base(context)
         {
             _context = context;
+            _caching = redisCaching;
         }
 
         // Get all customers
-        public IEnumerable<Customer> GetAllCustomers()
+        public async Task<IEnumerable<Customer>> GetAllCustomers()
         {
-            return _context.Customers.Include(c => c.Orders).ToList();
+            var cacheKey = $"GetAllUser";
+            var cachedUsers = await _caching.GetAsync<IEnumerable<Customer>>(cacheKey);
+
+            if (cachedUsers != null)
+            {
+                return cachedUsers;
+            }
+
+            var entities = await _context.Customers.Include(c => c.Orders).ToListAsync(); ;
+            await _caching.SetAsync(cacheKey, entities);
+            return entities;
+
         }
 
         // Get customer by Id
@@ -30,14 +45,12 @@ namespace Infrastructure.Repositories
         public void AddCustomer(Customer customer)
         {
             _context.Customers.Add(customer);
-            _context.SaveChanges();
         }
 
         // Update an existing customer
         public void UpdateCustomer(Customer customer)
         {
             _context.Customers.Update(customer);
-            _context.SaveChanges();
         }
 
         // Delete a customer
@@ -47,7 +60,6 @@ namespace Infrastructure.Repositories
             if (customer != null)
             {
                 _context.Customers.Remove(customer);
-                _context.SaveChanges();
             }
         }
 

@@ -1,10 +1,11 @@
 ﻿using Domain.Entities;
+using Domain.Repository.Generic;
 
-namespace Application.Repository
+namespace Domain.Repository
 {
-    public interface IUserRepo
+    public interface IUserRepo : IRepository<Customer>
     {
-        IEnumerable<Customer> GetAllCustomers();
+        Task<IEnumerable<Customer>> GetAllCustomers();
         Customer? GetCustomerById(int id);
         void AddCustomer(Customer customer);
         void UpdateCustomer(Customer customer);

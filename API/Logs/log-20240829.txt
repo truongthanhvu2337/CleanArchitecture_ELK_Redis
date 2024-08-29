@@ -1,0 +1,15 @@
+[2024/08/29 14:56:15] [INF] User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2024/08/29 14:56:15] [WRN] The WebRootPath was not found: D:\Code project\ASP.NET\EFMigration\API\wwwroot. Static files may be unavailable.
+[2024/08/29 14:56:15] [INF] Now listening on: https://localhost:7034
+[2024/08/29 14:56:15] [INF] Now listening on: http://localhost:5228
+[2024/08/29 14:56:15] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/29 14:56:15] [INF] Hosting environment: Development
+[2024/08/29 14:56:15] [INF] Content root path: D:\Code project\ASP.NET\EFMigration\API
+[2024/08/29 14:56:16] [INF] Request starting HTTP/2 GET https://localhost:7034/swagger/index.html - null null
+[2024/08/29 14:56:16] [INF] Request finished HTTP/2 GET https://localhost:7034/swagger/index.html - 200 null text/html;charset=utf-8 251.2625ms
+[2024/08/29 14:56:16] [INF] Request starting HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - null null
+[2024/08/29 14:56:16] [INF] Request starting HTTP/2 GET https://localhost:7034/_vs/browserLink - null null
+[2024/08/29 14:56:16] [INF] Request finished HTTP/2 GET https://localhost:7034/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 6.3103ms
+[2024/08/29 14:56:16] [INF] Request finished HTTP/2 GET https://localhost:7034/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.5453ms
+[2024/08/29 14:56:16] [INF] Request starting HTTP/2 GET https://localhost:7034/swagger/v1/swagger.json - null null
+[2024/08/29 14:56:16] [INF] Request finished HTTP/2 GET https://localhost:7034/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.255ms

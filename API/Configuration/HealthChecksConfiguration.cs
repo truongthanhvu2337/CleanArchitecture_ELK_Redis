@@ -1,7 +1,4 @@
-﻿using HealthChecks.UI.Client;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-
-namespace API.Configuration
+﻿namespace API.Configuration
 {
     public static class HealthChecksConfiguration
     {
@@ -9,19 +6,13 @@ namespace API.Configuration
             this IServiceCollection services,
             IConfiguration configuration)
         {
-            var hcBuilder = services.AddHealthChecks();
+            var connectionString = configuration.GetSection("Redis:HostName").Get<string>();
+            var sqlserver = configuration.GetSection("ConnectionStrings:local").Get<string>();
+            services.AddHealthChecks()
+                    .AddRedis(connectionString!)
+                    .AddSqlServer(sqlserver!);
 
             return services;
-        }
-
-        public static IEndpointRouteBuilder MapDefaultHealthChecks(this IEndpointRouteBuilder endpoints)
-        {
-            endpoints.MapHealthChecks("/health_check", new HealthCheckOptions
-            {
-                Predicate = _ => true,
-                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-            });
-            return endpoints;
         }
     }
 }

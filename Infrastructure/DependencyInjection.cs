@@ -1,10 +1,13 @@
-﻿using Application.Repository;
+﻿using Domain.Repository;
+using Domain.Repository.UnitOfWork;
+using Infrastructure.Caching;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using StackExchange.Redis;
 using System.Text;
 
 namespace Infrastructure
@@ -26,6 +29,15 @@ namespace Infrastructure
                 options.UseLazyLoadingProxies();
             });
 
+            //Add redis
+            services.AddStackExchangeRedisCache(options =>
+            {
+                var redisConnection = configuration["Redis:HostName"];
+                //var redisPassword = configuration["Redis:Password"];
+                //options.Configuration = $"{redisConnection},password={redisPassword}";
+                options.Configuration = redisConnection;
+            });
+            services.AddDistributedMemoryCache();
 
             //Add JWTconfig
             services.AddAuthentication(opt =>
@@ -50,6 +62,8 @@ namespace Infrastructure
             });
 
 
+            services.AddSingleton<IRedisCaching,  RedisCaching>();
+            services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IUserRepo, CustomerRepository>();
             services.AddScoped<IOrderRepo, OrderRepository>();
 
