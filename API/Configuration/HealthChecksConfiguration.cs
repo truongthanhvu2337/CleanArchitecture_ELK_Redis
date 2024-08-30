@@ -8,9 +8,12 @@
         {
             var connectionString = configuration.GetSection("Redis:HostName").Get<string>();
             var sqlserver = configuration.GetSection("ConnectionStrings:local").Get<string>();
+            var elasticSearch = configuration.GetSection("ElasticSearch:Url").Get<string>();
             services.AddHealthChecks()
                     .AddRedis(connectionString!)
-                    .AddSqlServer(sqlserver!);
+                    .AddSqlServer(sqlserver!)
+                    .AddElasticsearch(elasticSearch!);
+                
 
             return services;
         }

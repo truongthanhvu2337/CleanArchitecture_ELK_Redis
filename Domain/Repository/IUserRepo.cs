@@ -9,7 +9,7 @@ namespace Domain.Repository
         Customer? GetCustomerById(int id);
         void AddCustomer(Customer customer);
         void UpdateCustomer(Customer customer);
-        void DeleteCustomer(int id);
+        //void DeleteCustomer(int id);
         Task<Customer> GetByEmail(string Name);
 
     }

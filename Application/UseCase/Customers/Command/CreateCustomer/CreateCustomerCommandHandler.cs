@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using Domain.Entities;
+using FluentValidation;
 
 namespace Application.UseCase.Customers.Command.CreateCustomer
 {

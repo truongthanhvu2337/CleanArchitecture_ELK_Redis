@@ -13,7 +13,7 @@ namespace Application.UseCase.Customers.Command.CreateCustomer
         {
             RuleFor(c => c.Name)
                 .NotEmpty().WithMessage("Name must not empty")
-                .Length(5).WithMessage("Name must within 5 characters");
+                .Length(1, 10).WithMessage("Name must within 5 characters");
             RuleFor(c => c.Address)
                 .NotEmpty().WithMessage("Address must not empty");
         }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TYYsKPHHm2N2Hz/+uGbCDTW90mYvpJxXmbI574DFW6dWW5V5qFrt3pV/oKlbCS8vdIt4+u8gimVdmidBaUWK8w==",
+  "dgSpecHash": "g2cHooiIB3y5GKUdX89jP1AaSx+GprBvJkaXx5/ka1atmIfXACHTRFh4dbJ7WuIz4J/mj6ud+Fs1m7hJlTf4VQ==",
   "success": true,
   "projectFilePath": "D:\\Code project\\ASP.NET\\EFMigration\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\elastic.clients.elasticsearch\\8.15.4\\elastic.clients.elasticsearch.8.15.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\elastic.transport\\0.4.22\\elastic.transport.0.4.22.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
@@ -68,6 +70,7 @@
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\namotion.reflection\\3.1.1\\namotion.reflection.3.1.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\nest\\7.17.5\\nest.7.17.5.nupkg.sha512",

@@ -1,6 +1,9 @@
 ﻿using Domain.Repository;
 using Domain.Repository.UnitOfWork;
 using Infrastructure.Caching;
+using Infrastructure.Caching.Setting;
+using Infrastructure.Elasticsearch;
+using Infrastructure.Elasticsearch.Setting;
 using Infrastructure.Persistence;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,6 +20,11 @@ namespace Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+            //transfer data from appsetting.json to the correspondeding setting class
+            services.Configure<RedisSetting>(configuration.GetSection("Redis"));
+            services.Configure<ElasticSetting>(configuration.GetSection("ELasticSearch"));
+
+
             //Add DBcontext
             services.AddDbContext<ApplicationDbContext>((sp, options) =>
             {
@@ -62,7 +70,7 @@ namespace Infrastructure
                 };
             });
 
-
+            services.AddSingleton<IElasticService, ElasticService>();
             services.AddSingleton<IRedisCaching,  RedisCaching>();
             services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IUserRepo, CustomerRepository>();

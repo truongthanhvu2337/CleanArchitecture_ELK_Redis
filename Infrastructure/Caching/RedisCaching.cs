@@ -7,6 +7,7 @@ namespace Infrastructure.Caching
 {
     public class RedisCaching : IRedisCaching
     {
+        //
         private readonly IDistributedCache _distributedCache;
         private readonly RedisSetting _redisSetting;
 
@@ -38,7 +39,7 @@ namespace Infrastructure.Caching
         {
             var cacheOpt = new DistributedCacheEntryOptions
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(7) // Set cache time 1d
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(_redisSetting.TimeToLive) // Set cache time 1d
             };
 
             var jsonOpt = new JsonSerializerSettings()

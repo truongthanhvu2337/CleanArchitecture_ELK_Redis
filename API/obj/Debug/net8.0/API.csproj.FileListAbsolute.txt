@@ -179,3 +179,5 @@ D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Namotion.Reflection.dll
 D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\NJsonSchema.dll
 D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\NJsonSchema.Annotations.dll
+D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Elastic.Clients.Elasticsearch.dll
+D:\Code project\ASP.NET\EFMigration\API\bin\Debug\net8.0\Elastic.Transport.dll

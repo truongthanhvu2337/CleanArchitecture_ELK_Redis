@@ -3,6 +3,7 @@ using API.Middleware;
 using Application;
 using HealthChecks.UI.Client;
 using Infrastructure;
+using Infrastructure.Elasticsearch.Setting;
 using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
@@ -10,6 +11,9 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<ElasticSetting>(
+    builder.Configuration.GetSection("ElasticsearchSettings"));
+
 builder.ConfigureSerilog();
 
 builder.Services.AddScoped<GlobalException>();
@@ -70,7 +74,7 @@ app.MapControllers();
 
 //app.UseSession();
 
-app.MapHealthChecks("/health_check", new HealthCheckOptions
+app.MapHealthChecks("/h", new HealthCheckOptions
 {
     Predicate = _ => true,
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse

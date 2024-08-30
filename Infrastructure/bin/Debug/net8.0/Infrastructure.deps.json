@@ -9,6 +9,7 @@
       "Infrastructure/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
+          "Elastic.Clients.Elasticsearch": "8.15.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.Design": "8.0.8",
@@ -76,6 +77,25 @@
           "lib/net6.0/Castle.Core.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.1.1.0"
+          }
+        }
+      },
+      "Elastic.Clients.Elasticsearch/8.15.4": {
+        "dependencies": {
+          "Elastic.Transport": "0.4.22"
+        },
+        "runtime": {
+          "lib/net8.0/Elastic.Clients.Elasticsearch.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.15.4.0"
+          }
+        }
+      },
+      "Elastic.Transport/0.4.22": {
+        "runtime": {
+          "lib/net8.0/Elastic.Transport.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.4.22.0"
           }
         }
       },
@@ -1326,6 +1346,20 @@
       "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
       "path": "castle.core/5.1.1",
       "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
+    "Elastic.Clients.Elasticsearch/8.15.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9imKYxsptCNZBryFD1C9Qic9iG3oIkSjsk0kwnUkW/5NBdReEJKzej6xMxPtPcS1GLEsc8Uu5s+b2TcttHYIRQ==",
+      "path": "elastic.clients.elasticsearch/8.15.4",
+      "hashPath": "elastic.clients.elasticsearch.8.15.4.nupkg.sha512"
+    },
+    "Elastic.Transport/0.4.22": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9J5GPHJcT8sewn2zVfWTrsCQvfQYgUiY/jx+IRjWUk7XNPd837qfEL42I5baH69cyW/e4RoDy8v76yxqz95tDw==",
+      "path": "elastic.transport/0.4.22",
+      "hashPath": "elastic.transport.0.4.22.nupkg.sha512"
     },
     "FluentValidation/11.9.2": {
       "type": "package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uHS+frHpD39pTP3xfvbnRlEX+iPQYOzCccFbSAS0q35R6idpXE2B1PdjF2iEy8eRSOpQ8nogkxDpCHtdE9bwrQ==",
+  "dgSpecHash": "4hVrqYUn2M9Mx/LJxKeXuGE9V0DFRYQREnaTWiNZUaBP6rzgvQVsR6EPp05xwVAz82/CX3NSBzLYLuuYMx0JNQ==",
   "success": true,
   "projectFilePath": "D:\\Code project\\ASP.NET\\EFMigration\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\elastic.clients.elasticsearch\\8.15.4\\elastic.clients.elasticsearch.8.15.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\elastic.transport\\0.4.22\\elastic.transport.0.4.22.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
