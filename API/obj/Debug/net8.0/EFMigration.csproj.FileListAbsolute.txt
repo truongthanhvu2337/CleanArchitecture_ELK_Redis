@@ -1,7 +1,0 @@
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.csproj.AssemblyReference.cache
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.GeneratedMSBuildEditorConfig.editorconfig
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.AssemblyInfoInputs.cache
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.AssemblyInfo.cs
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.csproj.CoreCompileInputs.cache
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.MvcApplicationPartsAssemblyInfo.cache
-D:\Code project\ASP.NET\EFMigration\EFMigration\obj\Debug\net8.0\EFMigration.sourcelink.json
