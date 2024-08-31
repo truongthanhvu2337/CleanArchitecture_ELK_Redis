@@ -1,0 +1,502 @@
+[2024/08/31 02:34:35] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 02:34:35] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 02:34:35] [INF] Creating key {0017c811-e080-4736-ac0e-9ea1ece9dada} with creation date 2024-08-31 02:34:35Z, activation date 2024-08-31 02:34:35Z, and expiration date 2024-11-29 02:34:35Z.
+[2024/08/31 02:34:35] [WRN] No XML encryptor configured. Key {0017c811-e080-4736-ac0e-9ea1ece9dada} may be persisted to storage in unencrypted form.
+[2024/08/31 02:34:35] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 02:34:35] [INF] Now listening on: http://[::]:8080
+[2024/08/31 02:34:35] [INF] Now listening on: https://[::]:8081
+[2024/08/31 02:34:35] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 02:34:35] [INF] Hosting environment: Development
+[2024/08/31 02:34:35] [INF] Content root path: /app
+[2024/08/31 02:34:35] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger - null null
+[2024/08/31 02:34:35] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger - 301 0 null 31.077ms
+[2024/08/31 02:34:35] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/index.html - null null
+[2024/08/31 02:34:35] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/index.html - 200 null text/html;charset=utf-8 66.7069ms
+[2024/08/31 02:34:35] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/swagger-ui-bundle.js - null null
+[2024/08/31 02:34:35] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/swagger-ui.css - null null
+[2024/08/31 02:34:35] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/swagger-ui-standalone-preset.js - null null
+[2024/08/31 02:34:35] [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2024/08/31 02:34:35] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/swagger-ui.css - 200 143943 text/css 38.4599ms
+[2024/08/31 02:34:35] [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2024/08/31 02:34:35] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 74.1931ms
+[2024/08/31 02:34:35] [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2024/08/31 02:34:35] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 125.8177ms
+[2024/08/31 02:34:36] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - null null
+[2024/08/31 02:34:36] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 103.9146ms
+[2024/08/31 02:34:36] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/favicon-32x32.png - null null
+[2024/08/31 02:34:36] [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2024/08/31 02:34:36] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/favicon-32x32.png - 200 628 image/png 1.2157ms
+[2024/08/31 02:35:04] [INF] Request starting HTTP/2 GET https://localhost:59427/api/v1/customers/all - null null
+[2024/08/31 02:35:04] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:35:04] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:35:04] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:35:04] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 218.7073ms
+[2024/08/31 02:35:04] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:35:04] [INF] HTTP GET /api/v1/customers/all responded 200 in 301.3568 ms
+[2024/08/31 02:35:04] [INF] Request finished HTTP/2 GET https://localhost:59427/api/v1/customers/all - 200 null application/json; charset=utf-8 307.645ms
+[2024/08/31 02:35:12] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 56
+[2024/08/31 02:35:12] [INF] CORS policy execution successful.
+[2024/08/31 02:35:12] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:35:12] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:35:13] [INF] Executed DbCommand (46ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 02:35:13] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:35:13] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1181.0415ms
+[2024/08/31 02:35:13] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:35:13] [INF] HTTP POST /api/v1/customers/create responded 200 in 1192.6263 ms
+[2024/08/31 02:35:13] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 200 null application/json; charset=utf-8 1205.6306ms
+[2024/08/31 02:35:17] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 58
+[2024/08/31 02:35:17] [INF] CORS policy execution successful.
+[2024/08/31 02:35:17] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:35:17] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:35:17] [INF] Executed DbCommand (6ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 02:35:18] [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 02:35:18] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:35:18] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 216.7906ms
+[2024/08/31 02:35:18] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:35:18] [INF] HTTP POST /api/v1/customers/create responded 200 in 222.7159 ms
+[2024/08/31 02:35:18] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 200 null application/json; charset=utf-8 225.4215ms
+[2024/08/31 02:35:32] [INF] Request starting HTTP/2 GET https://localhost:59427/api/v1/customers/all - null null
+[2024/08/31 02:35:32] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:35:32] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:35:32] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:35:32] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 6.0336ms
+[2024/08/31 02:35:32] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:35:32] [INF] HTTP GET /api/v1/customers/all responded 200 in 7.8587 ms
+[2024/08/31 02:35:32] [INF] Request finished HTTP/2 GET https://localhost:59427/api/v1/customers/all - 200 null application/json; charset=utf-8 8.7579ms
+[2024/08/31 02:35:44] [INF] Request starting HTTP/2 GET https://localhost:59427/h - null null
+[2024/08/31 02:35:44] [INF] Executing endpoint 'Health checks'
+[2024/08/31 02:35:44] [INF] Executed endpoint 'Health checks'
+[2024/08/31 02:35:44] [INF] HTTP GET /h responded 200 in 417.9580 ms
+[2024/08/31 02:35:44] [INF] Request finished HTTP/2 GET https://localhost:59427/h - 200 null application/json 419.1852ms
+[2024/08/31 02:39:42] [INF] Application is shutting down...
+[2024/08/31 02:39:49] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 02:39:50] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 02:39:50] [INF] Creating key {f1d3febd-ee58-4ed3-9d3d-7fbfdfba6e86} with creation date 2024-08-31 02:39:50Z, activation date 2024-08-31 02:39:50Z, and expiration date 2024-11-29 02:39:50Z.
+[2024/08/31 02:39:50] [WRN] No XML encryptor configured. Key {f1d3febd-ee58-4ed3-9d3d-7fbfdfba6e86} may be persisted to storage in unencrypted form.
+[2024/08/31 02:39:50] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 02:39:50] [INF] Now listening on: http://[::]:8080
+[2024/08/31 02:39:50] [INF] Now listening on: https://[::]:8081
+[2024/08/31 02:39:50] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 02:39:50] [INF] Hosting environment: Development
+[2024/08/31 02:39:50] [INF] Content root path: /app
+[2024/08/31 02:39:50] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/index.html - null null
+[2024/08/31 02:39:50] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/index.html - 200 null text/html;charset=utf-8 106.487ms
+[2024/08/31 02:39:50] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - null null
+[2024/08/31 02:39:50] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.3485ms
+[2024/08/31 02:39:59] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 57
+[2024/08/31 02:39:59] [INF] CORS policy execution successful.
+[2024/08/31 02:39:59] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:39:59] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:40:00] [INF] Executed DbCommand (99ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 02:40:01] [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 02:40:01] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:40:01] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1888.3939ms
+[2024/08/31 02:40:01] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:40:01] [INF] HTTP POST /api/v1/customers/create responded 200 in 1945.8242 ms
+[2024/08/31 02:40:01] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 200 null application/json; charset=utf-8 1957.4311ms
+[2024/08/31 02:42:18] [INF] Application is shutting down...
+[2024/08/31 02:42:23] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 02:42:23] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 02:42:23] [INF] Creating key {e9ca0282-0a3d-47ba-9546-e8cca6696444} with creation date 2024-08-31 02:42:23Z, activation date 2024-08-31 02:42:23Z, and expiration date 2024-11-29 02:42:23Z.
+[2024/08/31 02:42:23] [WRN] No XML encryptor configured. Key {e9ca0282-0a3d-47ba-9546-e8cca6696444} may be persisted to storage in unencrypted form.
+[2024/08/31 02:42:23] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 02:42:23] [INF] Now listening on: http://[::]:8080
+[2024/08/31 02:42:23] [INF] Now listening on: https://[::]:8081
+[2024/08/31 02:42:23] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 02:42:23] [INF] Hosting environment: Development
+[2024/08/31 02:42:23] [INF] Content root path: /app
+[2024/08/31 02:42:23] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/index.html - null null
+[2024/08/31 02:42:24] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/index.html - 200 null text/html;charset=utf-8 75.6975ms
+[2024/08/31 02:42:24] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - null null
+[2024/08/31 02:42:24] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.2109ms
+[2024/08/31 02:42:34] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 58
+[2024/08/31 02:42:34] [INF] CORS policy execution successful.
+[2024/08/31 02:42:34] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:42:34] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:42:35] [INF] Executed DbCommand (43ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 02:42:35] [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 02:42:35] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:42:35] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1268.8186ms
+[2024/08/31 02:42:35] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:42:35] [INF] HTTP POST /api/v1/customers/create responded 200 in 1329.4886 ms
+[2024/08/31 02:42:35] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 200 null application/json; charset=utf-8 1346.6798ms
+[2024/08/31 02:46:10] [INF] Request starting HTTP/2 GET https://localhost:59427/api/v1/customers/all - null null
+[2024/08/31 02:46:10] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:46:10] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:46:10] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:46:10] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 43.6155ms
+[2024/08/31 02:46:10] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:46:10] [INF] HTTP GET /api/v1/customers/all responded 200 in 53.2232 ms
+[2024/08/31 02:46:10] [INF] Request finished HTTP/2 GET https://localhost:59427/api/v1/customers/all - 200 null application/json; charset=utf-8 58.2927ms
+[2024/08/31 02:51:20] [INF] Application is shutting down...
+[2024/08/31 02:51:26] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 02:51:26] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 02:51:26] [INF] Creating key {23a53cea-4895-46cc-927e-012bdfd29ee8} with creation date 2024-08-31 02:51:26Z, activation date 2024-08-31 02:51:26Z, and expiration date 2024-11-29 02:51:26Z.
+[2024/08/31 02:51:26] [WRN] No XML encryptor configured. Key {23a53cea-4895-46cc-927e-012bdfd29ee8} may be persisted to storage in unencrypted form.
+[2024/08/31 02:51:26] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 02:51:26] [INF] Now listening on: http://[::]:8080
+[2024/08/31 02:51:26] [INF] Now listening on: https://[::]:8081
+[2024/08/31 02:51:26] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 02:51:26] [INF] Hosting environment: Development
+[2024/08/31 02:51:26] [INF] Content root path: /app
+[2024/08/31 02:51:26] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/index.html - null null
+[2024/08/31 02:51:26] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/index.html - 200 null text/html;charset=utf-8 74.4863ms
+[2024/08/31 02:51:27] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - null null
+[2024/08/31 02:51:27] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.0226ms
+[2024/08/31 02:51:30] [INF] Request starting HTTP/2 GET https://localhost:59427/api/v1/customers/all - null null
+[2024/08/31 02:51:30] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:51:30] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:51:30] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:51:30] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 187.7468ms
+[2024/08/31 02:51:30] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:51:30] [INF] HTTP GET /api/v1/customers/all responded 200 in 250.1741 ms
+[2024/08/31 02:51:30] [INF] Request finished HTTP/2 GET https://localhost:59427/api/v1/customers/all - 200 null application/json; charset=utf-8 258.3064ms
+[2024/08/31 02:51:37] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 61
+[2024/08/31 02:51:37] [INF] CORS policy execution successful.
+[2024/08/31 02:51:37] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:51:37] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:51:37] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 31.4708ms
+[2024/08/31 02:51:37] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:51:37] [ERR] Validation failed: 
+ -- Name: Name must within 5 characters Severity: Error
+FluentValidation.ValidationException: Validation failed: 
+ -- Name: Name must within 5 characters Severity: Error
+   at Application.Behaviour.ValidationBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Code project\ASP.NET\EFMigration\Application\Behaviour\ValidationBehaviour.cs:line 33
+   at API.Controllers.CustomerController.CreateCustomer(CreateCustomerCommand command, CancellationToken cancellationToken) in D:\Code project\ASP.NET\EFMigration\API\Controllers\CustomerController.cs:line 54
+   at lambda_method19(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at API.Middleware.GlobalException.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Code project\ASP.NET\EFMigration\API\Middleware\GlobalException.cs:line 22
+[2024/08/31 02:51:37] [ERR] HTTP POST /api/v1/customers/create responded 500 in 67.7986 ms
+[2024/08/31 02:51:37] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 500 null application/json 78.8371ms
+[2024/08/31 02:51:42] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 60
+[2024/08/31 02:51:42] [INF] CORS policy execution successful.
+[2024/08/31 02:51:42] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:51:42] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:51:43] [INF] Executed DbCommand (35ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 02:51:43] [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 02:51:43] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:51:43] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1399.4167ms
+[2024/08/31 02:51:43] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 02:51:43] [INF] HTTP POST /api/v1/customers/create responded 200 in 1404.7416 ms
+[2024/08/31 02:51:43] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 200 null application/json; charset=utf-8 1412.0699ms
+[2024/08/31 02:51:46] [INF] Request starting HTTP/2 GET https://localhost:59427/api/v1/customers/all - null null
+[2024/08/31 02:51:46] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:51:46] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 02:51:46] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 02:51:46] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 71.9603ms
+[2024/08/31 02:51:46] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 02:51:46] [INF] HTTP GET /api/v1/customers/all responded 200 in 80.9676 ms
+[2024/08/31 02:51:46] [INF] Request finished HTTP/2 GET https://localhost:59427/api/v1/customers/all - 200 null application/json; charset=utf-8 82.608ms
+[2024/08/31 03:08:40] [INF] Application is shutting down...
+[2024/08/31 03:08:48] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 03:08:48] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 03:08:49] [INF] Creating key {284960c7-9ad5-4f21-9f46-f47bf05b24a6} with creation date 2024-08-31 03:08:49Z, activation date 2024-08-31 03:08:49Z, and expiration date 2024-11-29 03:08:49Z.
+[2024/08/31 03:08:49] [WRN] No XML encryptor configured. Key {284960c7-9ad5-4f21-9f46-f47bf05b24a6} may be persisted to storage in unencrypted form.
+[2024/08/31 03:08:49] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 03:08:49] [INF] Now listening on: http://[::]:8080
+[2024/08/31 03:08:49] [INF] Now listening on: https://[::]:8081
+[2024/08/31 03:08:49] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 03:08:49] [INF] Hosting environment: Development
+[2024/08/31 03:08:49] [INF] Content root path: /app
+[2024/08/31 03:08:49] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/index.html - null null
+[2024/08/31 03:08:49] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/index.html - 200 null text/html;charset=utf-8 76.5371ms
+[2024/08/31 03:08:50] [INF] Request starting HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - null null
+[2024/08/31 03:08:50] [INF] Request finished HTTP/2 GET https://localhost:59427/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.5335ms
+[2024/08/31 03:09:14] [INF] Request starting HTTP/2 POST https://localhost:59427/api/v1/customers/create - application/json 58
+[2024/08/31 03:09:14] [INF] CORS policy execution successful.
+[2024/08/31 03:09:14] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 03:09:14] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 03:09:15] [INF] Executed DbCommand (40ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 03:09:15] [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 03:09:15] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 03:09:15] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1252.6854ms
+[2024/08/31 03:09:15] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 03:09:15] [INF] HTTP POST /api/v1/customers/create responded 200 in 1310.7453 ms
+[2024/08/31 03:09:15] [INF] Request finished HTTP/2 POST https://localhost:59427/api/v1/customers/create - 200 null application/json; charset=utf-8 1324.6982ms
+[2024/08/31 03:10:11] [INF] Request starting HTTP/2 GET https://localhost:59427/api/v1/customers/all - null null
+[2024/08/31 03:10:11] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 03:10:11] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 03:10:11] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 03:10:11] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 83.0332ms
+[2024/08/31 03:10:11] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 03:10:11] [INF] HTTP GET /api/v1/customers/all responded 200 in 89.9820 ms
+[2024/08/31 03:10:11] [INF] Request finished HTTP/2 GET https://localhost:59427/api/v1/customers/all - 200 null application/json; charset=utf-8 93.1275ms
+[2024/08/31 08:00:33] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 08:00:33] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 08:00:33] [INF] Creating key {e0282dba-89cf-4029-9711-20251216cc0c} with creation date 2024-08-31 08:00:33Z, activation date 2024-08-31 08:00:33Z, and expiration date 2024-11-29 08:00:33Z.
+[2024/08/31 08:00:33] [WRN] No XML encryptor configured. Key {e0282dba-89cf-4029-9711-20251216cc0c} may be persisted to storage in unencrypted form.
+[2024/08/31 08:00:33] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 08:00:33] [INF] Now listening on: http://[::]:8080
+[2024/08/31 08:00:33] [INF] Now listening on: https://[::]:8081
+[2024/08/31 08:00:33] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 08:00:33] [INF] Hosting environment: Development
+[2024/08/31 08:00:33] [INF] Content root path: /app
+[2024/08/31 08:00:33] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger - null null
+[2024/08/31 08:00:33] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger - 301 0 null 28.4768ms
+[2024/08/31 08:00:33] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/index.html - null null
+[2024/08/31 08:00:33] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/index.html - 200 null text/html;charset=utf-8 58.2751ms
+[2024/08/31 08:00:33] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/swagger-ui-standalone-preset.js - null null
+[2024/08/31 08:00:33] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/swagger-ui-bundle.js - null null
+[2024/08/31 08:00:33] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/swagger-ui.css - null null
+[2024/08/31 08:00:33] [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2024/08/31 08:00:33] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/swagger-ui.css - 200 143943 text/css 34.5516ms
+[2024/08/31 08:00:33] [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2024/08/31 08:00:33] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 74.1587ms
+[2024/08/31 08:00:33] [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2024/08/31 08:00:33] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 128.3943ms
+[2024/08/31 08:00:34] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - null null
+[2024/08/31 08:00:34] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.2051ms
+[2024/08/31 08:00:34] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/favicon-32x32.png - null null
+[2024/08/31 08:00:34] [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2024/08/31 08:00:34] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/favicon-32x32.png - 200 628 image/png 1.6089ms
+[2024/08/31 08:00:38] [INF] Request starting HTTP/2 GET https://localhost:57576/api/v1/customers/all - null null
+[2024/08/31 08:00:39] [INF] Executing endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 08:00:39] [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] GetAll(System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:00:39] [INF] Executing ObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:00:39] [INF] Executed action API.Controllers.CustomerController.GetAll (API) in 486.0642ms
+[2024/08/31 08:00:39] [INF] Executed endpoint 'API.Controllers.CustomerController.GetAll (API)'
+[2024/08/31 08:00:39] [INF] HTTP GET /api/v1/customers/all responded 200 in 1298.1990 ms
+[2024/08/31 08:00:39] [INF] Request finished HTTP/2 GET https://localhost:57576/api/v1/customers/all - 200 null application/json; charset=utf-8 1306.137ms
+[2024/08/31 08:02:51] [INF] Application is shutting down...
+[2024/08/31 08:02:56] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 08:02:56] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 08:02:56] [INF] Creating key {caaa6177-d2e3-46a4-bd85-a047bfabe16c} with creation date 2024-08-31 08:02:56Z, activation date 2024-08-31 08:02:56Z, and expiration date 2024-11-29 08:02:56Z.
+[2024/08/31 08:02:56] [WRN] No XML encryptor configured. Key {caaa6177-d2e3-46a4-bd85-a047bfabe16c} may be persisted to storage in unencrypted form.
+[2024/08/31 08:02:56] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 08:02:56] [INF] Now listening on: http://[::]:8080
+[2024/08/31 08:02:56] [INF] Now listening on: https://[::]:8081
+[2024/08/31 08:02:56] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 08:02:56] [INF] Hosting environment: Development
+[2024/08/31 08:02:56] [INF] Content root path: /app
+[2024/08/31 08:02:57] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/index.html - null null
+[2024/08/31 08:02:57] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/index.html - 200 null text/html;charset=utf-8 78.5602ms
+[2024/08/31 08:02:57] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - null null
+[2024/08/31 08:02:57] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 98.1161ms
+[2024/08/31 08:03:59] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 55
+[2024/08/31 08:03:59] [INF] CORS policy execution successful.
+[2024/08/31 08:03:59] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:03:59] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:04:00] [INF] Executed DbCommand (75ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:04:00] [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:04:00] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:04:00] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1477.0521ms
+[2024/08/31 08:04:00] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:04:00] [INF] HTTP POST /api/v1/customers/create responded 200 in 1538.3894 ms
+[2024/08/31 08:04:00] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 1554.0446ms
+[2024/08/31 08:10:25] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 54
+[2024/08/31 08:10:25] [INF] CORS policy execution successful.
+[2024/08/31 08:10:25] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:10:25] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:10:25] [INF] Executed DbCommand (2ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:10:25] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:10:25] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 167.8928ms
+[2024/08/31 08:10:25] [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:10:25] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:10:25] [INF] HTTP POST /api/v1/customers/create responded 200 in 173.8322 ms
+[2024/08/31 08:10:25] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 177.7919ms
+[2024/08/31 08:12:11] [INF] Application is shutting down...
+[2024/08/31 08:12:17] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 08:12:17] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 08:12:17] [INF] Creating key {6da3be65-1297-41ae-a538-6e6c13430454} with creation date 2024-08-31 08:12:17Z, activation date 2024-08-31 08:12:17Z, and expiration date 2024-11-29 08:12:17Z.
+[2024/08/31 08:12:17] [WRN] No XML encryptor configured. Key {6da3be65-1297-41ae-a538-6e6c13430454} may be persisted to storage in unencrypted form.
+[2024/08/31 08:12:17] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 08:12:17] [INF] Now listening on: http://[::]:8080
+[2024/08/31 08:12:17] [INF] Now listening on: https://[::]:8081
+[2024/08/31 08:12:17] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 08:12:17] [INF] Hosting environment: Development
+[2024/08/31 08:12:17] [INF] Content root path: /app
+[2024/08/31 08:12:17] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/index.html - null null
+[2024/08/31 08:12:17] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/index.html - 200 null text/html;charset=utf-8 72.828ms
+[2024/08/31 08:12:17] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - null null
+[2024/08/31 08:12:17] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.2054ms
+[2024/08/31 08:12:30] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 54
+[2024/08/31 08:12:30] [INF] CORS policy execution successful.
+[2024/08/31 08:12:30] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:12:30] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:12:31] [INF] Executed DbCommand (32ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:12:31] [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:12:31] [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 08:12:31] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:12:31] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 1315.1434ms
+[2024/08/31 08:12:31] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:12:31] [INF] HTTP POST /api/v1/customers/create responded 200 in 1381.2902 ms
+[2024/08/31 08:12:31] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 1395.0044ms
+[2024/08/31 08:18:30] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 08:18:30] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 08:18:30] [INF] Creating key {8ea973ae-ccd0-445f-857d-683f4b7583c4} with creation date 2024-08-31 08:18:30Z, activation date 2024-08-31 08:18:30Z, and expiration date 2024-11-29 08:18:30Z.
+[2024/08/31 08:18:30] [WRN] No XML encryptor configured. Key {8ea973ae-ccd0-445f-857d-683f4b7583c4} may be persisted to storage in unencrypted form.
+[2024/08/31 08:18:30] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 08:18:30] [INF] Now listening on: http://[::]:8080
+[2024/08/31 08:18:30] [INF] Now listening on: https://[::]:8081
+[2024/08/31 08:18:30] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 08:18:30] [INF] Hosting environment: Development
+[2024/08/31 08:18:30] [INF] Content root path: /app
+[2024/08/31 08:18:31] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/index.html - null null
+[2024/08/31 08:18:31] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/index.html - 200 null text/html;charset=utf-8 118.7363ms
+[2024/08/31 08:18:31] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - null null
+[2024/08/31 08:18:31] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.2667ms
+[2024/08/31 08:18:58] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 55
+[2024/08/31 08:18:58] [INF] CORS policy execution successful.
+[2024/08/31 08:18:58] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:18:58] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:19:00] [INF] Executed DbCommand (50ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:19:10] [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:19:49] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:19:51] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 52739.651ms
+[2024/08/31 08:19:51] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:20:02] [INF] HTTP POST /api/v1/customers/create responded 200 in 63716.1943 ms
+[2024/08/31 08:20:02] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 63733.9093ms
+[2024/08/31 08:26:03] [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+[2024/08/31 08:26:04] [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[2024/08/31 08:26:04] [INF] Creating key {185c84b8-203a-4047-9862-34cef47fbcd2} with creation date 2024-08-31 08:26:04Z, activation date 2024-08-31 08:26:04Z, and expiration date 2024-11-29 08:26:04Z.
+[2024/08/31 08:26:04] [WRN] No XML encryptor configured. Key {185c84b8-203a-4047-9862-34cef47fbcd2} may be persisted to storage in unencrypted form.
+[2024/08/31 08:26:04] [WRN] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[2024/08/31 08:26:04] [INF] Now listening on: http://[::]:8080
+[2024/08/31 08:26:04] [INF] Now listening on: https://[::]:8081
+[2024/08/31 08:26:04] [INF] Application started. Press Ctrl+C to shut down.
+[2024/08/31 08:26:04] [INF] Hosting environment: Development
+[2024/08/31 08:26:04] [INF] Content root path: /app
+[2024/08/31 08:26:04] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/index.html - null null
+[2024/08/31 08:26:04] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/index.html - 200 null text/html;charset=utf-8 92.5663ms
+[2024/08/31 08:26:04] [INF] Request starting HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - null null
+[2024/08/31 08:26:04] [INF] Request finished HTTP/2 GET https://localhost:57576/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.5746ms
+[2024/08/31 08:26:12] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 58
+[2024/08/31 08:26:12] [INF] CORS policy execution successful.
+[2024/08/31 08:26:12] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:26:12] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:26:13] [INF] Executed DbCommand (46ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:26:19] [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:26:29] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:26:29] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 17044.6129ms
+[2024/08/31 08:26:29] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:26:29] [INF] HTTP POST /api/v1/customers/create responded 200 in 17149.6520 ms
+[2024/08/31 08:26:29] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 17188.0575ms
+[2024/08/31 08:27:18] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 55
+[2024/08/31 08:27:18] [INF] CORS policy execution successful.
+[2024/08/31 08:27:18] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:27:18] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:27:18] [INF] Executed DbCommand (4ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:27:23] [INF] Executed DbCommand (1,125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:27:29] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:27:29] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 11185.1707ms
+[2024/08/31 08:27:29] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:27:29] [INF] HTTP POST /api/v1/customers/create responded 200 in 11189.2954 ms
+[2024/08/31 08:27:29] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 11258.0343ms
+[2024/08/31 08:28:21] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 58
+[2024/08/31 08:28:21] [INF] CORS policy execution successful.
+[2024/08/31 08:28:21] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:28:21] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:28:21] [INF] Executed DbCommand (24ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0
+[2024/08/31 08:28:24] [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT MAX([c].[Id])
+FROM [Customers] AS [c]
+[2024/08/31 08:28:39] [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+[2024/08/31 08:28:39] [INF] Executing OkObjectResult, writing value of type 'Domain.Models.Response.APIResponse'.
+[2024/08/31 08:28:39] [INF] Executed action API.Controllers.CustomerController.CreateCustomer (API) in 18748.1779ms
+[2024/08/31 08:28:39] [INF] Executed endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:28:39] [INF] HTTP POST /api/v1/customers/create responded 200 in 18757.9884 ms
+[2024/08/31 08:28:39] [INF] Request finished HTTP/2 POST https://localhost:57576/api/v1/customers/create - 200 null application/json; charset=utf-8 18762.0172ms
+[2024/08/31 08:30:38] [INF] Request starting HTTP/2 POST https://localhost:57576/api/v1/customers/create - application/json 56
+[2024/08/31 08:30:38] [INF] CORS policy execution successful.
+[2024/08/31 08:30:38] [INF] Executing endpoint 'API.Controllers.CustomerController.CreateCustomer (API)'
+[2024/08/31 08:30:38] [INF] Route matched with {action = "CreateCustomer", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Domain.Models.Response.APIResponse]] CreateCustomer(Application.UseCase.Customers.Command.CreateCustomer.CreateCustomerCommand, System.Threading.CancellationToken) on controller API.Controllers.CustomerController (API).
+[2024/08/31 08:30:38] [INF] Executed DbCommand (3ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[Name]
+FROM [Customers] AS [c]
+WHERE [c].[Name] = @__Name_0

@@ -46,7 +46,7 @@ namespace Application.UseCase.Customers.Command.CreateCustomer
                 Address = request.Address,
             };
 
-            _userRepo.AddCustomer(newCustomer);
+            await _userRepo.AddCustomer(newCustomer);
             await _unitOfWork.SaveChangesAsync();
             var updatedUsers = _mapper.Map<CustomerResponseDto>(existUsers);
             return new APIResponse

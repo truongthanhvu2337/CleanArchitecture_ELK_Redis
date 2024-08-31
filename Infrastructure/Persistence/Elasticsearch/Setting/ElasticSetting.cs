@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Elasticsearch.Setting
+namespace Infrastructure.Persistence.Elasticsearch.Setting
 {
     public class ElasticSetting
     {
-        public string Url {  get; set; } = string.Empty;
+        public string Url { get; set; } = string.Empty;
         public string? DefaultIndex { get; set; }
     }
 }

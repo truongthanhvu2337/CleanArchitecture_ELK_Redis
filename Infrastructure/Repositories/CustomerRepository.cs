@@ -2,9 +2,9 @@
 using Domain.Entities;
 using Domain.Repository;
 using Infrastructure.Caching;
-using Infrastructure.Elasticsearch;
 using Infrastructure.Extensions;
 using Infrastructure.Persistence;
+using Infrastructure.Persistence.Elasticsearch;
 using Infrastructure.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
@@ -15,9 +15,9 @@ namespace Infrastructure.Repositories
     {
         private readonly ApplicationDbContext _context;
         private readonly IRedisCaching _caching;
-        private readonly IElasticService _elasticService;
+        private readonly IElasticService<Customer> _elasticService;
 
-        public CustomerRepository(ApplicationDbContext context, IRedisCaching caching, IElasticService elasticService) : base(context)
+        public CustomerRepository(ApplicationDbContext context, IRedisCaching caching, IElasticService<Customer> elasticService) : base(context)
         {
             _context = context;
             _caching = caching;
@@ -25,7 +25,6 @@ namespace Infrastructure.Repositories
         }
 
 
-        //client -> redis -> elastic search  -> db
 
         // Get all customers
         public async Task<IEnumerable<Customer>> GetAllCustomers()
@@ -53,11 +52,19 @@ namespace Infrastructure.Repositories
         }
 
         // Add a new customer
-        public void AddCustomer(Customer customer)
+        public async Task AddCustomer(Customer customer)
         {
-            _elasticService.IndexDocumentAsync(customer);
-            _caching.RemoveAsync("GetAllUser");
-            _context.Customers.Add(customer);
+                
+            var q = await _context.Customers.MaxAsync(x => x.Id);
+            await _elasticService.IndexDocumentWithKeywordAsync(new Customer
+            {
+                Id = q + 1,
+                Name = customer.Name,
+                Address = customer.Address,
+            }, q + 1);
+            await _caching.RemoveAsync("GetAllUser");
+
+            await _context.Customers.AddAsync(customer);
         }
 
         // Update an existing customer
@@ -68,17 +75,17 @@ namespace Infrastructure.Repositories
         }
 
         // Delete a customer
-        //public async Task<bool> DeleteCustomer(int id)
-        //{
-        //    await _caching.RemoveAsync("GetAllUser");
-        //    var customer = _context.Customers.Find(id);
-        //    if (customer != null)
-        //    {
-        //        _context.Customers.Remove(customer);
-        //        return true;
-        //    }
-        //    return false;
-        //}
+        public async Task<bool> DeleteCustomer(int id)
+        {
+            var customer = _context.Customers.Find(id);
+            if (customer != null)
+            {
+                _context.Customers.Remove(customer);
+                return true;
+            }
+            await _caching.RemoveAsync("GetAllUser");
+            return false;
+        }
 
         public async Task<Customer> GetByEmail(string Name)
         {
