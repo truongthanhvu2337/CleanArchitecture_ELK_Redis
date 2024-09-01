@@ -24,12 +24,12 @@ namespace Application.UseCase.Customers.Command.DeleteCustomer
 
         public async Task<APIResponse> Handle(DeleteCustomerCommand request, CancellationToken cancellationToken)
         {
-            await _userRepo.Delete(request.Id);
+            bool a = await _userRepo.DeleteCustomer(request.Id);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
             return new APIResponse
             {
                 StatusResponse = HttpStatusCode.OK,
-                Message = "Delete successfully",
+                Message = a ? "Delete successfully" : "Failed",
                 Data = null
             };
         }

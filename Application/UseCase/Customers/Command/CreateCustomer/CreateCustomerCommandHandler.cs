@@ -47,14 +47,16 @@ namespace Application.UseCase.Customers.Command.CreateCustomer
             };
 
             await _userRepo.AddCustomer(newCustomer);
-            await _unitOfWork.SaveChangesAsync();
-            var updatedUsers = _mapper.Map<CustomerResponseDto>(existUsers);
+            
+            var updatedUsers = _mapper.Map<CustomerResponseDto>(newCustomer);
+            var check = await _unitOfWork.SaveChangesAsync(cancellationToken);
             return new APIResponse
             {
                 StatusResponse = HttpStatusCode.OK,
-                Message = "Successfull",
+                Message = check > 0 ? "Successfull" : "Failed",
                 Data = updatedUsers,
             };
+
         }
     }
 }

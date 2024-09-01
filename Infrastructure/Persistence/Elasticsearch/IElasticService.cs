@@ -5,21 +5,16 @@ namespace Infrastructure.Persistence.Elasticsearch
 {
     public interface IElasticService<TDomain> where TDomain : class
     {
-        Task<bool> IndexDocumentAsync(TDomain customer);
-        Task<bool> BulkIndexDocumentsAsync(IEnumerable<TDomain> customer/*, string indexName*/);
+        Task IndexDocumentAsync(TDomain customer);
+        Task BulkIndexDocumentsAsync(IEnumerable<TDomain> customer/*, string indexName*/);
         Task<TDomain> Get(int key);
         Task<IEnumerable<TDomain>?> GetAll();
-        Task<bool> Remove(int key);
-        Task<long?> RemoveAll();
+        Task Remove(int key);
+        Task RemoveWithQuery(DeleteByQueryRequestDescriptor<TDomain> descriptor);
+        Task Update(TDomain domain, int id);
+        Task UpdateWithQuery(UpdateByQueryRequestDescriptor<TDomain> descriptor);
         Task<IEnumerable<TDomain>> FilterAsync(SearchRequestDescriptor<TDomain> descriptor);
-
-        /// <summary>
-        /// Ahihiohihhihihii
-        /// </summary>
-        /// <param name="domain"></param>
-        /// <param name="keyword"></param>
-        /// <returns></returns>
-        Task<bool> IndexDocumentWithKeywordAsync(TDomain domain, int keyword);
+        Task IndexDocumentWithKeywordAsync(TDomain domain, int keyword);
     }
 }
 

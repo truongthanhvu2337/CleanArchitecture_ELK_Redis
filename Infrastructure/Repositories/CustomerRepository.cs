@@ -1,12 +1,15 @@
 ﻿using Castle.Core.Resource;
 using Domain.Entities;
 using Domain.Repository;
+using Elastic.Clients.Elasticsearch;
+using Elastic.Clients.Elasticsearch.QueryDsl;
 using Infrastructure.Caching;
 using Infrastructure.Extensions;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Elasticsearch;
 using Infrastructure.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Net.Http.Headers;
 
 namespace Infrastructure.Repositories
@@ -29,67 +32,88 @@ namespace Infrastructure.Repositories
         // Get all customers
         public async Task<IEnumerable<Customer>> GetAllCustomers()
         {
-            //var cacheKey = $"GetAllUser";
-            //var cachedUsers = await _caching.GetAsync<IEnumerable<Customer>>(cacheKey);
+            var cacheKey = $"GetAllUser";
+            var cachedUsers = await _caching.GetAsync<IEnumerable<Customer>>(cacheKey);
 
-            //if (cachedUsers != null)
-            //{
-            //    return cachedUsers;
-            //}
-            //var a = await _elasticService.GetAll();
-            //var entities = await _context.Customers.Include(c => c.Orders).ToListAsync(); ;
-            //await _caching.SetAsync(cacheKey, entities);
+            if (cachedUsers != null)
+            {
+                return cachedUsers;
+            }
+
+            //var entities = await _context.Customers.Include(c => c.Orders).ToListAsync();
+
+            //get data from elastic search then cache in redis
             var entities = await _elasticService.GetAll();
+            await _caching.SetAsync(cacheKey, entities);
+            
             return entities;
 
         }
 
         // Get customer by Id
-        public Customer? GetCustomerById(int id)
+        public async Task<Customer?> GetCustomerById(int id)
         {
-            return _context.Customers.Include(c => c.Orders)
-                                     .FirstOrDefault(c => c.Id == id);
+            return await _context.Customers.Include(c => c.Orders)
+                                     .FirstOrDefaultAsync(c => c.Id == id);
         }
 
         // Add a new customer
         public async Task AddCustomer(Customer customer)
         {
-                
-            var q = await _context.Customers.MaxAsync(x => x.Id);
+            var newId = 1;
+            if (_context.Customers.Any())
+            {
+                var maxId = _context.Customers.Max(x => (int?)x.Id) ?? 0;
+                newId = maxId + 1;
+            }
             await _elasticService.IndexDocumentWithKeywordAsync(new Customer
             {
-                Id = q + 1,
+                Id = newId,
                 Name = customer.Name,
                 Address = customer.Address,
-            }, q + 1);
-            await _caching.RemoveAsync("GetAllUser");
+            }, newId);
 
+            await _caching.RemoveAsync("GetAllUser");
             await _context.Customers.AddAsync(customer);
         }
 
         // Update an existing customer
-        public void UpdateCustomer(Customer customer)
+        public async Task UpdateCustomer(Customer customer)
         {
-            _caching.RemoveAsync("GetAllUser");
+            await _elasticService.Update(customer, customer.Id);
+            await _caching.RemoveAsync("GetAllUser");
             _context.Customers.Update(customer);
         }
 
         // Delete a customer
         public async Task<bool> DeleteCustomer(int id)
         {
-            var customer = _context.Customers.Find(id);
+            var customer = await _context.Customers.FindAsync(id);
             if (customer != null)
             {
+                await _elasticService.Remove(id);
+                await _caching.RemoveAsync("GetAllUser");
                 _context.Customers.Remove(customer);
                 return true;
             }
-            await _caching.RemoveAsync("GetAllUser");
             return false;
         }
 
         public async Task<Customer> GetByEmail(string Name)
         {
             return await _context.Set<Customer>().FirstOrDefaultAsync(customer => customer.Name == Name);
+        }
+
+        public async Task<IEnumerable<Customer>> Pagination(int page, int pageSize)
+        {
+            int from = (page - 1) * pageSize;
+            var paginate = new SearchRequestDescriptor<Customer>()
+                .From(from)
+                .Size(pageSize)
+                .Query(q => q.MatchAll(new MatchAllQuery()));
+
+
+            return await _elasticService.FilterAsync(paginate);
         }
 
     }

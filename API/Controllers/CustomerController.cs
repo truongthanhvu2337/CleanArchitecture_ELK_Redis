@@ -4,6 +4,7 @@ using Application.UseCase.Customers.Command.UpdateCustomer;
 using Application.UseCase.Customers.Queries.GetAllByPagination;
 using Application.UseCase.Customers.Queries.GetAllCustomers;
 using Application.UseCase.Customers.Queries.GetCustomerById;
+using Domain.DTOs.Customer.Request;
 using Domain.Models.Response;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -63,9 +64,12 @@ namespace API.Controllers
         }
 
         [HttpPut("")]
-        public async Task<ActionResult<APIResponse>> Update(UpdateCustomerCommand command, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<APIResponse>> Update(
+            [FromQuery] int id,
+            [FromBody] CustomerRequestDto dto,
+            CancellationToken cancellationToken = default)
         {
-            var result = await _mediator.Send(command, cancellationToken);
+            var result = await _mediator.Send(new UpdateCustomerCommand(id, dto.Name!, dto.Address!), cancellationToken);
             return (result.StatusResponse != HttpStatusCode.OK) ? result : StatusCode((int)result.StatusResponse, result);
         }
     }

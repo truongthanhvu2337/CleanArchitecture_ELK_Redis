@@ -1,5 +1,4 @@
-﻿using Azure;
-using Elastic.Clients.Elasticsearch;
+﻿using Elastic.Clients.Elasticsearch;
 
 namespace Infrastructure.Persistence.Elasticsearch
 {
@@ -20,36 +19,32 @@ namespace Infrastructure.Persistence.Elasticsearch
             return indexResponse.Documents.ToList();
         }
 
-        public async Task<bool> IndexDocumentAsync(TDomain domain)
+        public async Task IndexDocumentAsync(TDomain domain)
         {
 
             var indexResponse = await _client.IndexAsync(domain, idx => idx.Index(_indexName));
             if (!indexResponse.IsValidResponse)
             {
-                // Xử lý lỗi
                 throw new Exception($"Error searching customers: {indexResponse.TryGetOriginalException}");
             }
-            return true;
         }
 
-        public async Task<bool> IndexDocumentWithKeywordAsync(TDomain domain, int keyword)
+        public async Task IndexDocumentWithKeywordAsync(TDomain domain, int keyword)
         {
 
             var indexResponse = await _client.IndexAsync(domain, idx => idx.Index(_indexName).Id(keyword));
             if (!indexResponse.IsValidResponse)
             {
-                // Xử lý lỗi
                 throw new Exception($"Error searching customers: {indexResponse.TryGetOriginalException}");
             }
-            return true;
         }
 
-        public async Task<bool> BulkIndexDocumentsAsync(IEnumerable<TDomain> customer/*, string indexName*/)
+        public async Task BulkIndexDocumentsAsync(IEnumerable<TDomain> customer)
         {
             var response = await _client.BulkAsync(idx => idx.Index(_indexName)
                     .UpdateMany(customer, (ud, u) => ud.Doc(u).DocAsUpsert(true)));
 
-            return response.IsValidResponse;
+            //return response.IsValidResponse;
         }
 
         public async Task<TDomain> Get(int key)
@@ -65,16 +60,27 @@ namespace Infrastructure.Persistence.Elasticsearch
             return response.IsValidResponse ? response.Documents.ToList() : default;
         }
 
-        public async Task<bool> Remove(int key)
+        public async Task Update(TDomain domain, int key)
         {
-            var response = await _client.DeleteAsync<TDomain>(key, d => d.Index(_indexName));
-            return response.IsValidResponse;
+            await _client.UpdateAsync<TDomain, TDomain>(_indexName, key, x => x.Doc(domain));
         }
 
-        public async Task<long?> RemoveAll()
+        public async Task UpdateWithQuery(UpdateByQueryRequestDescriptor<TDomain> descriptor)
         {
-            var response = await _client.DeleteByQueryAsync<TDomain>(d => d.Indices(_indexName));
-            return response.IsValidResponse ? response.Deleted : default;
+            await _client.UpdateByQueryAsync(descriptor);
+        }
+
+        public async Task Remove(int key)
+        {
+            var response = await _client.DeleteAsync<TDomain>(key, d => d.Index(_indexName));
+            //return response.IsValidResponse;
+        }
+
+        public async Task RemoveWithQuery(DeleteByQueryRequestDescriptor<TDomain> descriptor)
+        {
+            await _client.DeleteByQueryAsync(descriptor);
+            //var response = await _client.DeleteByQueryAsync<TDomain>(d => d.Indices(_indexName));
+            //return response.IsValidResponse ? response.Deleted : default;
         }
 
     }

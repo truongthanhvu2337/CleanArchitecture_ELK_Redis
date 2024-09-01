@@ -27,7 +27,7 @@ namespace Application.UseCase.Customers.Command.UpdateCustomer
 
         public async Task<APIResponse> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
-            var result = await _userRepo.GetByEmail(request.Name);
+            var result = await _userRepo.GetById(request.id);
             if (result == null)
             {
                 return new APIResponse
@@ -40,7 +40,7 @@ namespace Application.UseCase.Customers.Command.UpdateCustomer
 
             result.Name = request.Name;
             result.Address = request.Address;
-            await _userRepo.Update(result);
+            await _userRepo.UpdateCustomer(result);
             await _unitOfWork.SaveChangesAsync();
             var updatedUsers = mapper.Map<CustomerResponseDto>(result);
             return new APIResponse

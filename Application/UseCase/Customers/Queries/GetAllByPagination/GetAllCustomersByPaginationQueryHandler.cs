@@ -22,7 +22,7 @@ namespace Application.UseCase.Customers.Queries.GetAllByPagination
 
         public async Task<APIResponse> Handle(GetAllCustomerQueryByPagination request, CancellationToken cancellationToken)
         {
-            var users = await _userRepo.GetAll(request.Page, request.EachPage, "Name");
+            var users = await _userRepo.Pagination(request.Page, request.EachPage);
             return new APIResponse
             {
                 StatusResponse = HttpStatusCode.OK,

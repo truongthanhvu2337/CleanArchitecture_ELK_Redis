@@ -6,11 +6,12 @@ namespace Domain.Repository
     public interface IUserRepo : IRepository<Customer>
     {
         Task<IEnumerable<Customer>> GetAllCustomers();
-        Customer? GetCustomerById(int id);
+        Task<Customer?> GetCustomerById(int id);
         Task AddCustomer(Customer customer);
-        void UpdateCustomer(Customer customer);
-        //void DeleteCustomer(int id);
+        Task UpdateCustomer(Customer customer);
+        Task<bool> DeleteCustomer(int id);
         Task<Customer> GetByEmail(string Name);
+        Task<IEnumerable<Customer>> Pagination(int page, int pageSize);
 
     }
 }

@@ -10,11 +10,13 @@ namespace Application.UseCase.Customers.Command.UpdateCustomer
 {
     public class UpdateCustomerCommand : IRequest<APIResponse>
     {
+        public int id { get; set; }
         public string Name { get; set; } = String.Empty;
         public string Address { get; set; } = String.Empty;
 
-        public UpdateCustomerCommand(string name, string address)
+        public UpdateCustomerCommand(int id, string name, string address)
         {
+            this.id = id;
             Name = name;
             Address = address;
         }
