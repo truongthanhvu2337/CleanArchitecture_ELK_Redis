@@ -1,14 +1,14 @@
-Disclaimer: this demo may have flaws because it use for learning purpose. Feel free to correct me if i'm wrong, really appreciate that. you can dm me via email: truongthanhvu2337@gmail.com 
+**Disclaimer**: This demo may have flaws as it is used for learning purposes. Feel free to correct me if I'm wrong; I would really appreciate that. You can DM me via email at truongthanhvu2337@gmail.com.
 
 ## Introduction
 
-This repository is a demo of clean architecture with CQRS pattern,Redis and ELK (Elasticsearch/Logstash/Kibana) stack. In the future may implement Elasticsearch with mutiple node but at the time will use single-node to keep it simple
+This repository is a demo of Clean Architecture with the CQRS pattern, Redis, and the ELK stack (Elasticsearch/Logstash/Kibana). In the future, Elasticsearch may be implemented with multiple nodes, but for now, a single node will be used to keep it simple.
 
 ## Installation and setup
 
 First thing you should do is clone the repository
 
-```shell
+```bash
 git clone https://github.com/your/your-project.git
 
 cd your-project/
@@ -60,7 +60,7 @@ services:
 volumes:
   elasticsearch-data:
 ```
-Because this demo using logstash with sqlserver so we have to download the driver for sql server:
+Because this demo uses Logstash with SQL Server,we need to download the driver for SQL Server:
 https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16
 
 Then put in logstash file like this:
@@ -73,9 +73,9 @@ Then put in logstash file like this:
 │   └── < your driver should be here >
 └ 
 ```
-Your can config Dockerfile and to meet your need
+Your can configure the Dockerfile to meet your needs.
 
-```shell
+```bash
 FROM docker.elastic.co/logstash/logstash:8.15.0
 
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf
@@ -85,9 +85,9 @@ USER root
 COPY <your driver> /usr/share/logstash/logstash-core/lib/jars/<your driver>
 ```
 
-and logstash.config
+And logstash.config
 
-```shell
+```yaml
 input {
   jdbc {
     jdbc_connection_string => "jdbc:sqlserver://<your host>;databaseName=<your database>;user=<your username>;password=<your password>;encrypt=false"
@@ -126,18 +126,17 @@ output {
 }
 ```
 
-We done for config logstash, as for connection to elasticsearch and kibana kinda simple cause kibana already connect in docker compose but elastic search me may config a little. 
-Here we use Elastic.Client.Elasticsearch client for .Net
-```shell
+We're done configuring Logstash. Connecting to Elasticsearch and Kibana is relatively simple because Kibana is already connected in Docker Compose. However, we might need to configure Elasticsearch a bit more. Here, we use the **Elastic.Clients.Elasticsearch** client for .NET.
+```cs
 var settings = new ElasticsearchClientSettings(new Uri(<you url>));
 var client = new ElasticsearchClient(settings);
 
 services.AddSingleton(client);
 ```
 ### Setup redis
-To setup redis you should download Microsoft.Extensions.Caching.StackExchangeRedis package in .NET
+To setup redis you might download **Microsoft.Extensions.Caching.StackExchangeRedis** package in .NET
 then add in your program.cs or DependencyInjection.cs
-```shell
+```csharp
 services.AddStackExchangeRedisCache(options =>
 {
     var redisConnection = configuration["Redis:HostName"];
@@ -149,7 +148,7 @@ services.AddStackExchangeRedisCache(options =>
 
 Config appsetting for redis
 
-```shell
+```json
 "Redis": {
   "HostName": "redis:6379",
 },
