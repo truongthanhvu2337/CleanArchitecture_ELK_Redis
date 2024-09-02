@@ -16,7 +16,7 @@ cd your-project/
 ### Setup ELK
 
 This demo will use docker compose to setup ELK stack
-```shell
+```yaml
 services:
   #orther services...
 
@@ -64,7 +64,7 @@ Because this demo uses Logstash with SQL Server,we need to download the driver f
 https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16
 
 Then put in logstash file like this:
-```shell
+```bash
 ├── docker-compose.yml
 ├── logstash
 │   ├── config
@@ -87,7 +87,7 @@ COPY <your driver> /usr/share/logstash/logstash-core/lib/jars/<your driver>
 
 And logstash.config
 
-```yaml
+```
 input {
   jdbc {
     jdbc_connection_string => "jdbc:sqlserver://<your host>;databaseName=<your database>;user=<your username>;password=<your password>;encrypt=false"
