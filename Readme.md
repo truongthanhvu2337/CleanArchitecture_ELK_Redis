@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository is a demo of Clean Architecture with the CQRS pattern, Redis, and the ELK stack (Elasticsearch/Logstash/Kibana). In the future, Elasticsearch may be implemented with multiple nodes, but for now, a single node will be used to keep it simple.
+This repository is a demo of Clean Architecture with the CQRS pattern, Redis, and the ELK stack (Elasticsearch/Logstash/Kibana). **In the future,RabbitMQ will be implemented and Elasticsearch may be implemented with multiple nodes, but for now, a single node will be used to keep it simple.**
 
 ## Installation and setup
 

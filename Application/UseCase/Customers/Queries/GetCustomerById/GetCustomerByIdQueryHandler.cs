@@ -1,13 +1,8 @@
 ﻿using AutoMapper;
 using Domain.Models.Response;
-using Domain.Repository.UnitOfWork;
 using Domain.Repository;
+using Domain.Repository.UnitOfWork;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 
 namespace Application.UseCase.Customers.Queries.GetCustomerById

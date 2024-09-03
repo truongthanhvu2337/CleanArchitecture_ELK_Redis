@@ -1,6 +1,7 @@
 ﻿using Application.UseCase.Customers.Command.CreateCustomer;
 using Application.UseCase.Customers.Command.DeleteCustomer;
 using Application.UseCase.Customers.Command.UpdateCustomer;
+using Application.UseCase.Customers.Queries.FilterCustomer;
 using Application.UseCase.Customers.Queries.GetAllByPagination;
 using Application.UseCase.Customers.Queries.GetAllCustomers;
 using Application.UseCase.Customers.Queries.GetCustomerById;
@@ -32,6 +33,14 @@ namespace API.Controllers
                                                             CancellationToken cancellationToken = default)
         {
             var result = await _mediator.Send(new GetAllCustomerQueryByPagination(pageNo, eachPage), cancellationToken);
+            return Ok(result);
+        }
+
+        [HttpGet("filter")]
+        public async Task<ActionResult<APIResponse>> FilterCustomer([FromQuery] FilterCustomer query,
+                                                            CancellationToken cancellationToken = default)
+        {
+            var result = await _mediator.Send(query, cancellationToken);
             return Ok(result);
         }
 

@@ -13,6 +13,5 @@ namespace Application.UseCase.Customers.Queries.GetAllByPagination
             Page = page;
             EachPage = eachPage;
         }
-
     }
 }

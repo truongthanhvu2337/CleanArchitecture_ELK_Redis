@@ -1,12 +1,14 @@
 ﻿
+using Application.Abstractions.Caching;
+using Application.Abstractions.ElasticService;
 using Domain.Repository;
 using Domain.Repository.UnitOfWork;
 using Elastic.Clients.Elasticsearch;
 using Infrastructure.Caching;
 using Infrastructure.Caching.Setting;
+using Infrastructure.Elasticsearch;
+using Infrastructure.Elasticsearch.Setting;
 using Infrastructure.Persistence;
-using Infrastructure.Persistence.Elasticsearch;
-using Infrastructure.Persistence.Elasticsearch.Setting;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -78,7 +80,7 @@ namespace Infrastructure
 
             //add life time for the services
             services.AddSingleton(client);
-            services.AddSingleton<IRedisCaching,  RedisCaching>();
+            services.AddSingleton<IRedisCaching, RedisCaching>();
             services.AddScoped(typeof(IElasticService<>), typeof(ElasticService<>));
             services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<IUserRepo, CustomerRepository>();

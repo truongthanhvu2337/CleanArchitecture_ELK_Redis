@@ -1,10 +1,10 @@
-﻿using Domain.Entities;
+﻿using Application.Abstractions.Caching;
+using Application.Abstractions.ElasticService;
+using Domain.Entities;
 using Domain.Repository;
 using Elastic.Clients.Elasticsearch;
 using Elastic.Clients.Elasticsearch.QueryDsl;
-using Infrastructure.Caching;
 using Infrastructure.Persistence;
-using Infrastructure.Persistence.Elasticsearch;
 using Infrastructure.Repositories.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,7 +41,7 @@ namespace Infrastructure.Repositories
             //get data from elastic search then cache in redis
             var entities = await _elasticService.GetAll();
             await _caching.SetAsync(cacheKey, entities);
-            
+
             return entities;
 
         }

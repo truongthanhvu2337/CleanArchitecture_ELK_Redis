@@ -1,16 +1,10 @@
 ﻿using AutoMapper;
-using Domain.Models.Response;
-using Domain.Repository.UnitOfWork;
-using Domain.Repository;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net;
 using Domain.Entities;
-using FluentValidation;
+using Domain.Models.Response;
+using Domain.Repository;
+using Domain.Repository.UnitOfWork;
+using MediatR;
+using System.Net;
 
 namespace Application.UseCase.Customers.Command.CreateCustomer
 {
@@ -47,7 +41,7 @@ namespace Application.UseCase.Customers.Command.CreateCustomer
             };
 
             await _userRepo.AddCustomer(newCustomer);
-            
+
             var updatedUsers = _mapper.Map<CustomerResponseDto>(newCustomer);
             var check = await _unitOfWork.SaveChangesAsync(cancellationToken);
             return new APIResponse

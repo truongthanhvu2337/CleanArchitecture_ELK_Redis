@@ -1,7 +1,6 @@
-﻿using Domain.Entities;
-using Elastic.Clients.Elasticsearch;
+﻿using Elastic.Clients.Elasticsearch;
 
-namespace Infrastructure.Persistence.Elasticsearch
+namespace Application.Abstractions.ElasticService
 {
     public interface IElasticService<TDomain> where TDomain : class
     {

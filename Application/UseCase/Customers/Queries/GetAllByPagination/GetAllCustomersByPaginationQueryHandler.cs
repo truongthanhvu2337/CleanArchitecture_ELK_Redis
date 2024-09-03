@@ -9,13 +9,11 @@ namespace Application.UseCase.Customers.Queries.GetAllByPagination
 {
     public class GetAllUsersQueryHandler : IRequestHandler<GetAllCustomerQueryByPagination, APIResponse>
     {
-        private readonly IUnitOfWork _unitOfWork;
         private readonly IUserRepo _userRepo;
         private readonly IMapper _mapper;
 
-        public GetAllUsersQueryHandler(IUnitOfWork unitOfWork, IMapper mapper, IUserRepo userRepo)
+        public GetAllUsersQueryHandler(IMapper mapper, IUserRepo userRepo)
         {
-            _unitOfWork = unitOfWork;
             _userRepo = userRepo;
             _mapper = mapper;
         }
